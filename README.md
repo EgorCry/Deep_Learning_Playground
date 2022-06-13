@@ -5,3 +5,4 @@
 ## Added:
 #### 1) MNIST numbers model
 #### 2) MNIST Fashion model
+#### 3) Titanic model
