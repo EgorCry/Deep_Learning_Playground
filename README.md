@@ -8,4 +8,4 @@
 #### 3) Titanic model
 
 ## Learning:
-#### 1) Data Visualization Course
+#### 1) Data Visualization Course (https://www.kaggle.com/learn/data-visualization)
