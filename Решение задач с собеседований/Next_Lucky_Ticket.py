@@ -48,15 +48,15 @@ print(lucky_ticket(831108))
 print()
 
 
-# Test Time Section
+# Test Time Section (Run in Terminal for showing the Bar)
 # import time
 # from progress.bar import IncrementalBar
-# 
+#
 # bar = IncrementalBar('Countdown', max=999_999 - 100_000)
-# for i in range(100_000, 999_999):
+# for i in range(100_000, 200_000):
 #     start_time = time.time()
 #     lucky_ticket(i)
 #     end_time = time.time() - start_time
 #     if end_time >= 1.0:
-#         print(time.time() - start_time)
+#         print(end_time)
 #     bar.next()
