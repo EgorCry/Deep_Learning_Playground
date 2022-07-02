@@ -33,7 +33,7 @@ def lucky_ticket(ticket):
             return ticket
         if sum(map(int, list(str(f)))) < list(map(int, list(str(f))))[2]:
             f += 1
-            s = 101
+            s = 1
             ticket = f * 1_000 + s
         else:
             ticket += 1
