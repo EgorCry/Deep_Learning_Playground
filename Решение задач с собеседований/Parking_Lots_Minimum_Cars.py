@@ -23,10 +23,10 @@ def number_on_full_parking_lots(cars, n):
     cur_cars = 0
     for i in range(len(events)):
         if events[i][1] == -1:
-            occupied -= 1
+            occupied -= events[i][2]
             cur_cars -= 1
         elif events[i][1] == 1:
-            occupied += 1
+            occupied += events[i][2]
             cur_cars += 1
         if occupied == n:
             min_cars = min(cur_cars, min_cars)
