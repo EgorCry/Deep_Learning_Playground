@@ -10,6 +10,8 @@ game_over = False
 if __name__ == '__main__':
     while not game_over:
         for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                game_over = True
             print(event)
 
     pygame.quit()
