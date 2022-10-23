@@ -22,7 +22,7 @@ black = (0, 0, 0)
 snake_block = 10
 
 clock = pygame.time.Clock()
-FPS = 5
+FPS = 15
 
 font_style = pygame.font.SysFont('bahnschrift', 25)
 score_font = pygame.font.SysFont('comicsans', 35)
@@ -31,6 +31,11 @@ score_font = pygame.font.SysFont('comicsans', 35)
 def snake_blit(snake_block, snake_list):
     for block in snake_list:
         pygame.draw.rect(dis, black, [block[0], block[1], snake_block, snake_block])
+
+
+def show_score(score):
+    value = score_font.render(f'Your score: {str(score)}', True, yellow)
+    dis.blit(value, [0, 0])
 
 
 def message(msg, color):
@@ -59,6 +64,7 @@ def game_loop():
         while game_close:
             dis.fill(blue)
             message('You lost! Press Q to quit R to start again', red)
+            show_score(length_of_snake - 1)
 
             pygame.display.update()
 
@@ -98,9 +104,7 @@ def game_loop():
 
         pygame.draw.rect(dis, green, [foodx, foody, snake_block, snake_block])
 
-        snake_head = []
-        snake_head.append(x1)
-        snake_head.append(y1)
+        snake_head = [x1, y1]
         snake_list.append(snake_head)
         if len(snake_list) > length_of_snake:
             del snake_list[0]
@@ -110,6 +114,7 @@ def game_loop():
                 game_close = True
 
         snake_blit(snake_block, snake_list)
+        show_score(length_of_snake - 1)
 
         pygame.display.update()
 
