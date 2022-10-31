@@ -534,8 +534,9 @@
       <excludeFolder url="file://$MODULE_DIR$/SkolkovoHack/env/Lib/site-packages/tensorflow_estimator/python/estimator/tpu" />
       <excludeFolder url="file://$MODULE_DIR$/SkolkovoHack/env/Lib/site-packages/tensorflow_io_gcs_filesystem/core/python/ops" />
       <excludeFolder url="file://$MODULE_DIR$/SkolkovoHack/env/Lib/site-packages/tornado/test/gettext_translations" />
+      <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Python 3.10" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PyDocumentationSettings">
