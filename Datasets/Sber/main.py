@@ -36,7 +36,7 @@ def show_plot(forecast, init_data):
     plt.plot(forecast['dates'], forecast['values'])
     plt.plot(init_data['reportdate'], init_data['value'])
 
-    plt.show()
+    plt.savefig('forecast.png')
 
 
 def model_forecast(init_date, window, data):
@@ -55,8 +55,6 @@ def model_forecast(init_date, window, data):
 
     forecast = create_dataframe(dates, prediction)
 
-    print(forecast)
-
     return model, forecast
 
 
@@ -74,5 +72,10 @@ if __name__ == '__main__':
     df = df[:ind[0]]
 
     model, forecast = model_forecast(init_date, window, data)
+
+    nswr = input('Save the model? (Yes/No)\n').lower()
+
+    if nswr == 'yes':
+        model.save_model()
 
     show_plot(forecast, df)

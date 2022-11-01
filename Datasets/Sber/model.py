@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import pickle
 from sklearn.linear_model import LinearRegression
 
 
@@ -31,6 +32,10 @@ class Model:
             nswr = np.append(nswr, prediction)
 
         return nswr[-self.window:]
+
+    def save_model(self):
+        filename = 'sber_model.sav'
+        pickle.dump(self.model, open(filename, 'wb'))
 
     def make_dates(self, init_date):
         date = init_date
